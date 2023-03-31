@@ -1,4 +1,5 @@
 replica.key            = issue.key
+replica.type           = issue.type
 // replica.assignee       = issue.assignee 
 // Support for multiple assignees to a single issue 
 // replica.assignees      = issue.assignees 

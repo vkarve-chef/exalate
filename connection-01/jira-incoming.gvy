@@ -1,7 +1,13 @@
-if(firstSync){
+if ( firstSync ) {
+
    issue.projectKey   = "SEA" 
    // Set type name from source issue, if not found set a default
-   issue.typeName     = nodeHelper.getIssueType(replica.type?.name, issue.projectKey)?.name ?: "Bug"
+   if ( replica.type.name == "Pull Request" ) {
+      issue.typeName = "Story"
+   } else {
+      issue.typeName = nodeHelper.getIssueType(replica.type?.name, issue.projectKey)?.name ?: "Bug"
+   }
+
    issue.components = [ nodeHelper.createComponent(issue, "Prod-A", "", null, "PROJECT_DEFAULT") ]
 }
 issue.summary      = replica.summary

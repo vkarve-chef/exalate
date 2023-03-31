@@ -1,0 +1,1 @@
+1. project = SEA AND status NOT IN ('Done', 'Ready for PO Review')
